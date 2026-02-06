@@ -1,11 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Моя семья - мой космос</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <div class="nav-container">
+            <div class="logo">🚀 Моя семья - мой космос</div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="#auth">Авторизация</a></li>
+                    <li><a href="account.html">Личный кабинет</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#competitions">Конкурсы</a></li>
+                    <li><a href="#search">Поиск</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <button class="theme-toggle" onclick="toggleTheme()">🌙 Светлая</button>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="slider container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <div class="slide-img"></div>
+                    <div class="slide-info">
+                        <h3>Космическая эстафета</h3>
+                        <p>Семейная командная игра с элементами космических заданий</p>
+                        <div class="rating">
+                            <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+                        </div>
+                        <a href="competition.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-img"></div>
+                    <div class="slide-info">
+                        <h3>Звездный конструктор</h3>
+                        <p>Создайте свою космическую модель вместе с семьей</p>
+                        <div class="rating">
+                            <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+                        </div>
+                        <a href="competition.html" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-nav prev">‹</button>
+            <button class="slider-nav next">›</button>
+        </section>
+
+        <section id="auth" class="container">
+            <h2>Авторизация</h2>
+            <form class="form-section">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Пароль</label>
+                    <input type="password" required>
+                </div>
+                <a href="#" class="btn">Войти</a>
+                <a href="registration.html">Забыли пароль?</a>
+            </form>
+        </section>
+
+        <section id="about" class="container">
+            <h2>О нас</h2>
+            <p>Калуга - космическая столица России! Мы объединяем семьи в увлекательном путешествии к звездам...</p>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNGVjZGM0Ii8+PC9zdmc+" alt="Космос">
+        </section>
+
+        <section id="competitions" class="container">
+            <h2>Конкурсы</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-img"></div>
+                    <h3>Космическая эстафета</h3>
+                    <p>32 участника</p>
+                    <div class="rating">
+                        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+                    </div>
+                    <a href="#" class="btn">Записаться</a>
+                </div>
+                <!-- 4 more cards... -->
+            </div>
+        </section>
+
+        <section id="search" class="container">
+            <h2>Поиск конкурсов</h2>
+            <form>
+                <input type="text" placeholder="Название или описание конкурса..." list="search-suggestions">
+                <datalist id="search-suggestions">
+                    <option value="Космическая эстафета">
+                    <option value="Звездный конструктор">
+                </datalist>
+                <button class="btn">Поиск</button>
+            </form>
+        </section>
+
+        <section class="container">
+            <h2>Отзывы</h2>
+            <div class="slider reviews-slider">
+                <!-- Review slides -->
+            </div>
+        </section>
+
+        <section class="container no-print">
+            <h2>Подписка на новости</h2>
+            <form class="subscription-form">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">Согласен на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="btn">Подписаться</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="tel:+74842234567">+7 (484) 223-45-67</a> | 
+                    <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+                </div>
+                <div class="footer-nav">
+                    <a href="index.html">Главная</a>
+                    <a href="index-light.html">Главная-светлая</a>
+                    <a href="registration.html">Регистрация</a>
+                    <a href="competition.html">Конкурс</a>
+                    <a href="account.html">Личный кабинет</a>
+                    <a href="404.html">404</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light');
+            const btn = document.querySelector('.theme-toggle');
+            btn.textContent = document.body.classList.contains('light') ? '☀️ Темная' : '🌙 Светлая';
+        }
+
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+
+        // Slider functionality (visual only)
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        document.querySelector('.slider-nav.next').onclick = () => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        };
+        
+        document.querySelector('.slider-nav.prev').onclick = () => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        };
+            </script>
 </body>
 </html>
